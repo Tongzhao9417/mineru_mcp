@@ -1,6 +1,6 @@
 [project]
-name = "mineru-mcp"
-version = "1.0.0"
+name = "mineru-mcp-server"
+version = "0.1.0"
 description = "MinerU MCP Server for PDF to Markdown conversion"
 authors = [
     {name = "TongZhao"}
@@ -20,7 +20,7 @@ dependencies = [
 ]
 
 [project.scripts]
-mineru-mcp = "mineru_mcp.cli:main"
+mineru-mcp-server = "mineru_mcp.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/Tongzhao9417/mineru_mcp"

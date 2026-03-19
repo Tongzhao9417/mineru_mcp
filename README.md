@@ -14,7 +14,7 @@
 ## 安装
 
 ```bash
-pip install mineru-mcp
+pip install mineru-mcp-server
 ```
 
 从源码安装：
@@ -47,7 +47,7 @@ pip install -e .
 {
   "mcpServers": {
     "mineru-mcp": {
-      "command": "mineru-mcp",
+      "command": "mineru-mcp-server",
       "env": {
         "MINERU_API_KEY": "your-api-key"
       }
@@ -63,7 +63,7 @@ pip install -e .
   "mcpServers": {
     "mineru-mcp": {
       "command": "uv",
-      "args": ["--directory", "/path/to/mineru_mcp", "run", "mineru-mcp"],
+      "args": ["--directory", "/path/to/mineru_mcp", "run", "mineru-mcp-server"],
       "env": {
         "MINERU_API_KEY": "your-api-key"
       }
@@ -76,10 +76,10 @@ pip install -e .
 
 ```bash
 # stdio 模式（默认，MCP 客户端自动管理）
-mineru-mcp
+mineru-mcp-server
 
 # HTTP 模式（独立服务，多客户端可连接）
-mineru-mcp --transport streamable-http --port 8001
+mineru-mcp-server --transport streamable-http --port 8001
 ```
 
 > 推荐使用 `streamable-http` 传输模式（MCP 规范推荐），SSE 已被标记为 deprecated。
