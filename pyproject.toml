@@ -1,0 +1,34 @@
+[project]
+name = "mineru-mcp"
+version = "1.0.0"
+description = "MinerU MCP Server for PDF to Markdown conversion"
+authors = [
+    {name = "minerU",email = "OpenDataLab@pjlab.org.cn"}
+]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10,<4.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "fastmcp>=3.0.0",
+    "python-dotenv>=1.0.0",
+    "httpx>=0.24.0",
+]
+
+[project.scripts]
+mineru-mcp = "mineru_mcp.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Tongzhao9417/mineru_mcp"
+Repository = "https://github.com/Tongzhao9417/mineru_mcp"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools>=42.0", "wheel"]
+build-backend = "setuptools.build_meta"
